@@ -22,7 +22,7 @@ export const TextInputPanel = () => {
   // Clear prompt param on page load
   useEffect(() => {
     if (params.prompt) {
-      form.setFieldValue("text", decodeURIComponent(params.prompt));
+      form.setFieldValue("text", params.prompt);
     }
   }, []);
   return (

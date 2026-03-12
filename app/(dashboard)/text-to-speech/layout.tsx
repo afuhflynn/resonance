@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Generate speech from text",
 };
 
-const TestToSpeechLayout = ({ children }: { children: React.ReactNode }) => {
+const TextToSpeechLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex h-full min-h-0 flex-col overflow-hidden">
       <PageHeader title="Text to Speech" />
@@ -15,4 +15,4 @@ const TestToSpeechLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default TestToSpeechLayout;
+export default TextToSpeechLayout;

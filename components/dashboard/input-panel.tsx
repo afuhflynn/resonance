@@ -42,11 +42,6 @@ export const TextInputPanel = () => {
             onChange={(e) => setText(e.target.value)}
             required
             maxLength={TEXT_MAX_LENGTH}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                handleGenerate();
-              }
-            }}
           />
 
           <div className="flex items-center justify-between">
