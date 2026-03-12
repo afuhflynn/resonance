@@ -1,5 +1,5 @@
 import { PageHeader } from "../page-header";
-import { TextInputPanel } from "../text-to-speech/input-panel";
+import { TextInputPanel } from "./input-panel";
 import { QuickActionsPanel } from "../text-to-speech/quick-actions-panel";
 import { DashboardHeader } from "./header";
 import { HeroPattern } from "./hero-pattern";
