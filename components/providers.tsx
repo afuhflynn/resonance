@@ -35,11 +35,11 @@ export function Providers({ children }: { children: ReactNode }) {
             closeButton
             position="bottom-right"
           />
-        </ThemeProvider>
 
-        <QueryClientProvider client={queryClient}>
-          {children}
-        </QueryClientProvider>
+          <QueryClientProvider client={queryClient}>
+            {children}
+          </QueryClientProvider>
+        </ThemeProvider>
       </ClerkProvider>
     </NuqsAdapter>
   );

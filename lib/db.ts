@@ -6,11 +6,11 @@ const adapter = new PrismaPg({
   connectionString: env.DATABASE_URL,
 });
 
-const globalForPrisma = global as unknown as { prisma: PrismaClient };
+const globalForPrisma = globalThis as typeof globalThis & {
+  prisma?: PrismaClient;
+};
 
-const prisma = new PrismaClient({
-  adapter,
-});
+const prisma = globalForPrisma.prisma ?? new PrismaClient({ adapter });
 
 if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
 

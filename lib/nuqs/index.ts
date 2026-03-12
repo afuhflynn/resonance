@@ -1,9 +1,14 @@
-import { parseAsString, type SingleParserBuilder, type Values } from "nuqs";
+import {
+  parseAsInteger,
+  parseAsString,
+  type SingleParserBuilder,
+  type Values,
+} from "nuqs";
 
 export const searchParamsSchema = {
   redirect: parseAsString,
-  page: parseAsString.withDefault("1"),
-  limit: parseAsString.withDefault("10"),
+  page: parseAsInteger.withDefault(1),
+  limit: parseAsInteger.withDefault(10),
   search: parseAsString.withDefault(""),
   tab: parseAsString.withDefault("overview"),
   prompt: parseAsString,
